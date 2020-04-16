@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../styles/all.css">
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="module">
+  import BestsellersTable from "./index.js";
+  import data from "./bestsellers-data.js";
+
+  const bestsellersTable = new BestsellersTable({
+    isSortLocally: true
+  });
+
+  bestsellersTable.update(data);
+
+  root.append(bestsellersTable.$element);
+</script>
+</body>
